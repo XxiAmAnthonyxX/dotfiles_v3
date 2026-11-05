@@ -1,0 +1,4 @@
+module qs
+singleton Theme 1.0 Theme.qml
+ChamferPanel 1.0 modules/ChamferPanel.qml
+ScreenshotMenu 1.0 modules/ScreenshotMenu.qml
