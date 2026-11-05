@@ -1,0 +1,36 @@
+[color]
+gradient = 1
+gradient_count = 8
+gradient_color_1 = '#13162e'
+gradient_color_2 = '#5D6DF8'
+gradient_color_3 = '#5D8CDA'
+gradient_color_4 = '#9272C2'
+gradient_color_5 = '#A796F9'
+gradient_color_6 = '#C693B0'
+gradient_color_7 = '#D6ACF0'
+gradient_color_8 = '#c4c4ca'
+
+[general]
+live-config = 1
+bars = 0
+bar_width = 2
+bar_spacing = 1
+framerate = 60
+sensitivity = 125
+lower_cutoff_freq = 32
+higher_cutoff_freq = 16000
+noise_reduction = 0.65
+
+[input]
+method = pipewire
+
+[output]
+method = noncurses
+orientation = horizontal
+channels = stereo
+split_stereo = 0
+left_bottom = 1
+
+[smoothing]
+monstercat = 1
+waves = 0

@@ -1,0 +1,110 @@
+# ~/.config/yazi/theme.toml
+# Minimal theme — Kitty + pywal colors will carry most of the look.
+# Override sections if you want a fixed cyberpunk palette.
+
+[mgr]
+cwd = { fg = "cyan", bold = true }
+
+hovered         = { reversed = true }
+preview_hovered = { underline = true }
+
+find_keyword  = { fg = "yellow", bold = true, italic = true }
+find_position = { fg = "magenta", bg = "reset", bold = true }
+
+marker_copied   = { fg = "green",  bg = "green" }
+marker_cut      = { fg = "red",    bg = "red" }
+marker_marked   = { fg = "yellow", bg = "yellow" }
+marker_selected = { fg = "cyan",   bg = "cyan" }
+
+tab_active   = { reversed = true }
+tab_inactive = {}
+tab_width    = 1
+
+count_selected = { fg = "black", bg = "yellow" }
+count_copied   = { fg = "black", bg = "green" }
+count_cut      = { fg = "black", bg = "red" }
+
+border_symbol = "│"
+border_style  = { fg = "darkgray" }
+
+[mode]
+normal_main = { fg = "black", bg = "cyan", bold = true }
+normal_alt  = { fg = "cyan",  bg = "darkgray" }
+select_main = { fg = "black", bg = "yellow", bold = true }
+select_alt  = { fg = "yellow", bg = "darkgray" }
+unset_main  = { fg = "black", bg = "magenta", bold = true }
+unset_alt   = { fg = "magenta", bg = "darkgray" }
+
+[status]
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+overall   = { bg = "darkgray" }
+perm_type  = { fg = "green" }
+perm_read  = { fg = "yellow" }
+perm_write = { fg = "red" }
+perm_exec  = { fg = "cyan" }
+progress_label  = { bold = true }
+progress_normal = { fg = "blue", bg = "black" }
+progress_error  = { fg = "red", bg = "black" }
+
+[select]
+border   = { fg = "cyan" }
+active   = { fg = "magenta", bold = true }
+inactive = {}
+
+[input]
+border   = { fg = "cyan" }
+title    = {}
+value    = {}
+selected = { reversed = true }
+
+[completion]
+border   = { fg = "cyan" }
+active   = { reversed = true }
+inactive = {}
+
+[tasks]
+border  = { fg = "cyan" }
+title   = {}
+hovered = { underline = true }
+
+[which]
+mask            = { bg = "black" }
+cand            = { fg = "cyan" }
+rest            = { fg = "darkgray" }
+desc            = { fg = "magenta" }
+separator       = "  "
+separator_style = { fg = "darkgray" }
+
+[help]
+on      = { fg = "cyan" }
+run     = { fg = "magenta" }
+desc    = {}
+hovered = { reversed = true, bold = true }
+footer  = { fg = "black", bg = "white" }
+
+[notify]
+title_info  = { fg = "green" }
+title_warn  = { fg = "yellow" }
+title_error = { fg = "red" }
+
+[filetype]
+rules = [
+	# Images
+	{ mime = "image/*", fg = "yellow" },
+	# Videos
+	{ mime = "video/*", fg = "magenta" },
+	# Audio
+	{ mime = "audio/*", fg = "cyan" },
+	# Archives
+	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "red" },
+	# Documents
+	{ mime = "application/pdf", fg = "blue" },
+	# Empty files
+	{ mime = "inode/empty", fg = "darkgray" },
+	# Special files
+	{ url = "*", is = "orphan", fg = "red", italic = true },
+	{ url = "*", is = "exec",   fg = "green", bold = true },
+	# Dummy fallback
+	{ url = "*/", fg = "blue", bold = true },
+]

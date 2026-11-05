@@ -1,0 +1,48 @@
+# ~/.config/yazi/keymap.toml
+
+[mgr]
+prepend_keymap = [
+	# --- Navigation / open ---
+	{ on = "l",       run = "plugin smart-enter", desc = "Enter dir or open file" },
+	{ on = "<Enter>", run = "plugin smart-enter", desc = "Enter dir or open file" },
+	{ on = "p",       run = "plugin smart-paste", desc = "Paste into hovered dir or CWD" },
+
+	# --- Search / jump ---
+	{ on = "f", run = "plugin jump-to-char", desc = "Jump to char" },
+	{ on = "F", run = "plugin smart-filter", desc = "Smart filter" },
+	{ on = "z", run = "plugin fzf",          desc = "Jump via fzf" },
+	{ on = "Z", run = "plugin zoxide",       desc = "Jump via zoxide" },
+
+	# --- Panes ---
+	{ on = "T",        run = "plugin toggle-pane max-preview",  desc = "Maximize / restore preview" },
+	{ on = ["t", "p"], run = "plugin toggle-pane min-parent",   desc = "Toggle parent pane" },
+	{ on = ["t", "c"], run = "plugin toggle-pane min-current",  desc = "Toggle current pane" },
+
+	# --- Image zoom ---
+	{ on = ["+", "="], run = "plugin zoom 1",  desc = "Zoom in" },
+	{ on = "-",        run = "plugin zoom -1", desc = "Zoom out" },
+
+	# --- File ops ---
+	{ on = ["c", "m"], run = "plugin chmod", desc = "Chmod selected" },
+	{ on = ["c", "a"], run = "open --workers=1 -- compress", desc = "Compress selection (ouch)" },
+	{ on = "M",        run = "plugin mount", desc = "Mount manager" },
+
+	# --- Metadata (keeps visual preview; opens in blocked pager shell) ---
+	{ on = ["i", "m"], run = 'shell --block -- mediainfo "$0"', desc = "mediainfo on hovered" },
+	{ on = ["i", "e"], run = 'shell --block -- exiftool "$0"',  desc = "exiftool on hovered" },
+	{ on = ["i", "h"], run = 'shell --block -- hexyl "$0"',     desc = "hexyl on hovered" },
+
+	# --- Go shortcuts ---
+	{ on = ["g", "h"], run = "cd ~",           desc = "Home" },
+	{ on = ["g", "o"], run = "cd ~/.config",   desc = "Config" },
+	{ on = ["g", "d"], run = "cd ~/Downloads", desc = "Downloads" },
+	{ on = ["g", "D"], run = "cd ~/Documents", desc = "Documents" },
+	{ on = ["g", "p"], run = "cd ~/Pictures",  desc = "Pictures" },
+	{ on = ["g", "v"], run = "cd ~/Videos",    desc = "Videos" },
+	{ on = ["g", "t"], run = "cd /tmp",        desc = "Tmp" },
+	{ on = ["g", "r"], run = "cd /",           desc = "Root" },
+
+	# --- Shell helpers ---
+	{ on = "!",        run = 'shell --block -- "$SHELL"', desc = "Open shell here" },
+	{ on = ["c", "c"], run = 'shell -- ya emit cd "$(wl-paste)"', desc = "Cd to clipboard path" },
+]
