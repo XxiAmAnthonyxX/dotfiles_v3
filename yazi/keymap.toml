@@ -1,0 +1,8 @@
+[mgr]
+prepend_keymap = [
+	{ on = "<Enter>", run = "plugin smart-enter", desc = "Enter Directory / Extract Archive / Opeen File " },
+	{ on = "z", run = "plugin zoxide", desc = "Jump via zoxide" },
+	{ on = "c", run = "open --workers=1 -- compress", desc = "Compress selection (ouch)" },
+	{ on = "m", run = "plugin mount", desc = "Mount manager" },
+	{ on = "!", run = 'shell --block -- "$SHELL"', desc = "Open shell here" },
+]
