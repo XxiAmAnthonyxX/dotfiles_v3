@@ -65,7 +65,7 @@ sudo pacman -S --needed --noconfirm \
   kitty fish starship fastfetch \
   eza bat fd sd ripgrep fzf zoxide atuin ouch less jq glow hexyl mediainfo perl-image-exiftool \
   yazi imv mpv ffmpeg ffmpegthumbnailer imagemagick poppler resvg \
-  udiskie udisks2 gvfs \
+  udiskie udisks2 gvfs gvfs-mtp libmtp android-udev android-tools \
   btop rocm-smi-lib \
   cliphist wl-clipboard wl-clip-persist \
   steam mesa vulkan-radeon lib32-mesa lib32-vulkan-radeon \
@@ -84,6 +84,7 @@ cp -r /mnt/backup/DOTS/{yazi.desktop} ~/.local/share/applications/
 chsh -s /usr/bin/fish
 
 # Yazi
+ya pkg install
 update-desktop-database ~/.local/share/applications
 
 # Useful timers
