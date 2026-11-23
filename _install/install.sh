@@ -1,12 +1,12 @@
 #!/bin/bash
 set -euo pipefail
 
-DISK="/dev/nvme0n1"
-HOSTNAME="Arch"
-USERNAME="x"
-ROOT_PASSWORD="321"
-USER_PASSWORD="123"
-TIMEZONE="America/Chicago"
+DISK=""
+HOSTNAME=""
+USERNAME=""
+ROOT_PASSWORD=""
+USER_PASSWORD=""
+TIMEZONE=""
 
 echo "=============================================="
 echo "  Arch install about to start"
